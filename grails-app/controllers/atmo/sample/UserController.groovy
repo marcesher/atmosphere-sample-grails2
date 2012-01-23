@@ -81,6 +81,7 @@ class UserController {
             return
         }
 
+        broadcaster['/atmosphere/sample'].broadcast("$userInstance.name : $userInstance.id updated")
         flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: "show", id: userInstance.id)
     }
@@ -96,6 +97,7 @@ class UserController {
         try {
             userInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'user.label', default: 'User'), params.id])
+            broadcaster['/atmosphere/sample'].broadcast("$userInstance.name : $userInstance.id deleted")
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
