@@ -5,7 +5,6 @@ atmospherePlugin {
         initParams = [
                 'org.atmosphere.cpr.sessionSupport': 'false',
                 'org.atmosphere.cpr.cometSupport': 'org.atmosphere.container.Tomcat7CometSupport',
-                'org.atmosphere.cpr.CometSupport.maxInactiveActivity': '60000'
         ]
         urlPattern = '/atmosphere/*'
     }

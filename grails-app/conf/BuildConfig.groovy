@@ -55,7 +55,7 @@ grails.project.dependency.resolution = {
         compile ":jquery:1.7.1"
         compile ":resources:1.1.6"
 
-        runtime ":atmosphere:0.4.2"
+        runtime ":atmosphere:0.4.2.1"
 
         //build ":tomcat:$grailsVersion" USE 7.0.23 instead
     }
